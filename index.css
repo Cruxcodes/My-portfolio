@@ -1,0 +1,136 @@
+body {
+  margin: 0pc;
+  font-family: "Roboto", sans-serif;
+}
+nav {
+  width: 100%;
+  position: fixed;
+  border-bottom: 2px solid white;
+  padding: 5px 0px;
+  z-index: 100000;
+}
+nav::before{
+    position: absolute;
+    content: '';
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(8px);
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+nav ul li {
+  width: fit-content;
+  display: inline;
+}
+nav ul li a{
+  color: white;
+
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: space-around;
+  background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.603),
+      rgba(129, 122, 122, 0.219),
+      rgba(129, 122, 122, 0.416),
+      rgba(0, 0, 0, 0.603),
+      rgba(0, 0, 0, 0.501)
+    ),
+    url(./image.jpg);
+    background-size: cover;
+}
+
+main img {
+  position: absolute;
+  bottom: 0%;
+  /* left: 50%; */
+  right: 5%;
+  height: 90%;
+  /* transform: translateX(-50%); */
+  filter: grayscale(0.7) drop-shadow(3px 0px 10px rgb(53, 53, 53));
+  opacity: 0.97;
+}
+
+.mainContent {
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  padding-top: 5vh;
+  height: 50%;
+  flex-direction: column;
+  z-index: inherit;
+  box-sizing: border-box;
+  color: white;
+}
+.mainContent h1 {
+  margin: 0pc;
+  color: rgb(159, 156, 156);
+  font-weight: 700;
+  opacity: .8;
+  font-size: 9rem;
+  z-index: 100;
+}
+
+@media screen {
+    
+}
+
+.about {
+  width: fit-content;
+  display: flex;
+  justify-content: end;
+  height: 50%;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 22;
+  color: white;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.5em;
+  opacity: .7;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+.about p:last-child {
+  width: 54%;
+}
+
+.about h2 {
+  color: rgb(159, 156, 156);
+  margin: 0pc;
+  text-transform: uppercase;
+}
+
+p > span{
+    position: relative;
+    opacity: 1;
+    color: white;
+    background: rgb(143, 140, 140);
+    font-weight: 500;
+}
+
+p > span::before{
+    width: 80%;
+    bottom: -5px;
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 10px;
+    background: rgb(206, 206, 206);
+}
