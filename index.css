@@ -57,10 +57,10 @@ main img {
   position: absolute;
   bottom: 0%;
   /* left: 50%; */
-  right: 5%;
-  height: 90%;
+  right: 3%;
+  height: 80%;
   /* transform: translateX(-50%); */
-  filter: grayscale(0.7) drop-shadow(3px 0px 10px rgb(53, 53, 53));
+  filter: grayscale(0.7) drop-shadow(3px 0px 10px rgba(30, 30, 30, 0.837));
   opacity: 0.97;
 }
 
@@ -74,6 +74,8 @@ main img {
   z-index: inherit;
   box-sizing: border-box;
   color: white;
+  z-index: 100;
+
 }
 .mainContent h1 {
   margin: 0pc;
@@ -81,11 +83,12 @@ main img {
   font-weight: 700;
   opacity: .8;
   font-size: 9rem;
-  z-index: 100;
 }
 
-@media screen {
-    
+@media screen and (max-width: 1080px){
+    .mainContent h1{
+        font-size: 6em;
+    }
 }
 
 .about {
@@ -102,13 +105,30 @@ main img {
 p {
   font-weight: 300;
   line-height: 1.5em;
-  opacity: .7;
   color: rgb(255, 255, 255);
   font-size: 20px;
 }
-
+.about p{
+  opacity: .8;
+}
 .about p:last-child {
-  width: 54%;
+  width: 60%;
+}
+
+@media screen and (max-width: 1080px){
+.about p:last-child {
+  width: 80%;
+}
+}
+@media screen and (max-width: 800px){
+.about p:last-child {
+  width: 100%;
+}
+.about p{
+  opacity: 1;
+  font-size: 18px;
+  margin: 5px 0px;
+}
 }
 
 .about h2 {
