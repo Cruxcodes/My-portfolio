@@ -497,24 +497,29 @@ main img {
 }
 .firstCard {
   grid-area: firstCard;
-  font-size: 1.8vh;
+  font-size: 2.1vh;
 }
 .secondCard {
   grid-area: secondCard;
+  font-size: 2.1vh;
 }
 
 .thirdCard {
   grid-area: thirdCard;
+  font-size: 2.1vh;
 }
 .fourthCard {
   grid-area: fourthCard;
+  font-size: 2.1vh;
 }
 
 .fifthCard {
   grid-area: fifthCard;
+  font-size: 2.1vh;
 }
 .sixthCard {
   grid-area: sixthCard;
+  font-size: 2.1vh;
 }
 .row .card p {
   letter-spacing: 1.2px;
@@ -532,7 +537,6 @@ main img {
   height: 100%;
 }
 
-
 .heading {
   display: flex;
   padding: 0px 20px;
@@ -543,10 +547,10 @@ main img {
   text-transform: capitalize;
 }
 @media screen and (max-width: 768px) {
-  .heading{
+  .heading {
     flex-direction: column;
   }
-  .heading span{
+  .heading span {
     margin: 3px;
   }
 }
@@ -573,9 +577,9 @@ main img {
 }
 
 @media screen and (max-width: 765px) {
-  .links a{
-  font-size: 1.5vh;
-  padding: 10px 15px;
+  .links a {
+    font-size: 1.5vh;
+    padding: 10px 15px;
   }
 }
 .links a::before {
