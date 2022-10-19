@@ -80,7 +80,9 @@ main {
   position: relative;
   box-sizing: border-box;
   justify-content: space-between;
-  background: rgba(8, 8, 8, 0.831);
+  /* background: rgba(8, 8, 8, 0.831); */
+  background: rgb(32, 32, 32);
+
   /* background: url(./image.jpg); */
   background-attachment: fixed;
   background-size: cover;
@@ -606,6 +608,10 @@ main img {
 }
 
 /* This is the skill section */
+.skills{
+  background: rgb(32, 32, 32);
+
+}
 .skill_container {
   max-width: 1200px;
   margin: auto;
