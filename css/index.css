@@ -443,8 +443,8 @@ main img {
 }
 
 .websites {
-  /* max-width: 1200px; */
-  /* margin: auto; */
+  max-width: 1200px;
+  margin: auto;
   /* width: 80%; */
 }
 
@@ -602,9 +602,9 @@ main img {
 
 /* This is the skill section */
 .skill_container {
-  /* max-width: 1200px;
+  max-width: 1200px;
   margin: auto;
-  width: 80%; */
+  /* width: 80%; */
 }
 .skillcards {
   display: grid;
