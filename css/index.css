@@ -3,6 +3,15 @@ body {
   font-family: "Roboto", sans-serif;
   background-size: cover;
   background-attachment: fixed;
+  animation: overflow 3.5s 1;
+}
+@keyframes overflow {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: hidden;
+  }
 }
 html {
   scroll-snap-type: y proximity;
@@ -11,7 +20,7 @@ main {
   scroll-snap-align: start;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 ::-webkit-scrollbar-track {
   background: rgb(50, 50, 50);
@@ -64,6 +73,7 @@ nav ul li a {
 main {
   height: 100vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   padding: 30px 80px;
   width: 100%;
@@ -75,6 +85,15 @@ main {
   background-attachment: fixed;
   background-size: cover;
 }
+
+@media screen and (max-width: 765px) {
+  main {
+    padding: 30px 20px;
+    padding-top: 50px;
+  }
+}
+
+/* This is for the fading black animation */
 .cover {
   position: absolute;
   width: 0%;
@@ -116,6 +135,73 @@ main {
     opacity: 0;
   }
 }
+/* End of cover animation */
+
+main img {
+  position: absolute;
+  bottom: 0%;
+  /* left: 50%; */
+  right: 3%;
+  height: 80%;
+  transform: translateX(-0%);
+  filter: grayscale(0.5) drop-shadow(3px 0px 10px rgba(30, 30, 30, 0.837));
+  opacity: 0.97;
+}
+
+.mainContent {
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  padding-top: 5vh;
+  /* height: 50%; */
+  flex-direction: column;
+  z-index: inherit;
+  box-sizing: border-box;
+  color: white;
+  z-index: 100;
+}
+
+.mainContent h1 {
+  margin: 0pc;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  width: fit-content;
+  position: relative;
+  /* opacity: 0.7; */
+  font-size: 12.5vh;
+}
+
+.mainContent h1::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background: #000;
+}
+@media screen and (max-width: 1080px) {
+  .mainContent h1 {
+    font-size: 8.5vh;
+  }
+}
+
+@media screen and (max-width: 437px) {
+  .mainContent h1 {
+    /* text-align: center; */
+    font-size: 7.5vh;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mainContent h1 {
+    /* text-align: center; */
+    font-size: 6.5vh;
+  }
+}
+@media screen and (max-width: 325px) {
+  .mainContent h1 {
+    /* text-align: center; */
+    font-size: 5.5vh;
+  }
+}
 .mainContent .name {
   z-index: 500;
   position: relative;
@@ -151,51 +237,14 @@ main {
     width: 0%;
   }
 }
-main img {
-  position: absolute;
-  bottom: 0%;
-  /* left: 50%; */
-  right: 3%;
-  height: 80%;
-  transform: translateX(-0%);
-  filter: grayscale(0.5) drop-shadow(3px 0px 10px rgba(30, 30, 30, 0.837));
-  opacity: 0.97;
-}
-
-.mainContent {
-  width: 100%;
-  display: flex;
-  /* justify-content: center; */
-  padding-top: 5vh;
-  /* height: 50%; */
-  flex-direction: column;
-  z-index: inherit;
-  box-sizing: border-box;
-  color: white;
-  z-index: 100;
-}
-main {
-  height: 100vh;
-  position: relative;
-}
-.mainContent h1 {
-  margin: 0pc;
+.mainContent p {
+  font-weight: 300;
+  line-height: 1.5em;
   color: rgb(255, 255, 255);
-  font-weight: 700;
-  width: fit-content;
-  position: relative;
-  /* opacity: 0.7; */
-  font-size: 8.5rem;
 }
-
-.mainContent h1::before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  /* content: ''; */
-  background: #000;
+.nickname {
+  font-size: 2.3vh;
 }
-
 .resume {
   padding: 20px 40px;
   border-radius: 30px;
@@ -203,10 +252,16 @@ main {
   box-shadow: 2px 2px 10px rgb(21, 21, 21);
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 2.3vh;
   width: fit-content;
   transition: 0.5s;
   position: relative;
+}
+@media screen and (min-width: 2000px) {
+  .resume {
+    padding: 30px 50px;
+    border-radius: 50px;
+  }
 }
 .resume::after {
   position: absolute;
@@ -231,9 +286,9 @@ main {
   transform: translateY(-10px);
   color: rgb(255, 255, 255);
 }
-.nickname,.resume{
+.nickname,
+.resume {
   animation: left 1s 3s 1;
-
 }
 @keyframes left {
   0% {
@@ -275,11 +330,6 @@ main {
     opacity: 0;
   }
 }
-@media screen and (max-width: 1080px) {
-  .mainContent h1 {
-    font-size: 6em;
-  }
-}
 
 .about {
   width: fit-content;
@@ -314,12 +364,7 @@ main {
 .about p {
   opacity: 0.8;
 }
-.mainContent p {
-  font-weight: 300;
-  line-height: 1.5em;
-  color: rgb(255, 255, 255);
-  font-size: 22px;
-}
+
 .about p:last-child {
   width: 50%;
 }
@@ -379,6 +424,7 @@ main {
   border-radius: 10px;
   background: rgb(255, 225, 225);
 }
+
 .works {
   width: 100%;
   background: rgb(52, 52, 52);
@@ -389,10 +435,17 @@ main {
   z-index: inherit;
 }
 
+@media screen and (max-width: 765px) {
+  .works {
+    padding: 30px 20px;
+    padding-top: 50px;
+  }
+}
+
 .websites {
-  max-width: 1200px;
-  margin: auto;
-  width: 80%;
+  /* max-width: 1200px; */
+  /* margin: auto; */
+  /* width: 80%; */
 }
 
 .websites .row .card {
@@ -403,14 +456,6 @@ main {
 .websites .row .card:hover {
   box-shadow: 1px 25px 25px rgb(28, 28, 28);
   transform: translateY(-5px);
-}
-@media screen and (max-width: 768px) {
-  .websites {
-    flex-direction: column;
-  }
-  .websites > div {
-    width: 45%;
-  }
 }
 
 .container {
@@ -429,6 +474,17 @@ main {
     "thirdCard thirdCard fourthCard fourthCard"
     "thirdCard thirdCard fourthCard fourthCard"
     "fifthCard fifthCard sixthCard sixthCard";
+}
+@media screen and (max-width: 550px) {
+  .row {
+    grid-template-areas:
+      "firstCard firstCard firstCard firstCard"
+      "secondCard secondCard secondCard secondCard"
+      "thirdCard thirdCard thirdCard thirdCard"
+      "fourthCard fourthCard fourthCard fourthCard"
+      "fifthCard fifthCard fifthCard fifthCard"
+      "sixthCard sixthCard sixthCard sixthCard";
+  }
 }
 .row > div {
   height: 100%;
@@ -474,27 +530,7 @@ main {
   width: 100%;
   height: 100%;
 }
-/* .row .card_head .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  padding: 0px 30px 0px;
-  top: 0%;
-  width: 50%;
-  text-align: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 2vh;
-  transition: background-position 2s, opacity 0.5s;
-  border: none;
-  font-size: 1.8vh;
-} */
-/* .websites > div:hover .row .card_head .overlay {
-  opacity: 1;
-  background-position: 50% 50%;
-} */
+
 
 .heading {
   display: flex;
@@ -504,6 +540,14 @@ main {
 }
 .heading span {
   text-transform: capitalize;
+}
+@media screen and (max-width: 768px) {
+  .heading{
+    flex-direction: column;
+  }
+  .heading span{
+    margin: 3px;
+  }
 }
 .links {
   display: flex;
@@ -517,13 +561,21 @@ main {
   text-decoration: none;
   margin: 0pc 20px;
   color: white;
-  padding: 10px 25px;
+  padding: 10px 24px;
   position: relative;
   /* border-radius: 30px; */
   overflow: hidden;
   background: rgb(53, 53, 53);
   transition: 0.4s;
+  font-size: 1.8vh;
   border: 2px solid rgba(255, 255, 255, 0.131);
+}
+
+@media screen and (max-width: 765px) {
+  .links a{
+  font-size: 1.5vh;
+  padding: 10px 15px;
+  }
 }
 .links a::before {
   content: "";
@@ -550,9 +602,9 @@ main {
 
 /* This is the skill section */
 .skill_container {
-  max-width: 1200px;
+  /* max-width: 1200px;
   margin: auto;
-  width: 80%;
+  width: 80%; */
 }
 .skillcards {
   display: grid;
