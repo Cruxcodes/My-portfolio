@@ -497,6 +497,7 @@ main img {
 }
 .firstCard {
   grid-area: firstCard;
+  font-size: 1.8vh;
 }
 .secondCard {
   grid-area: secondCard;
