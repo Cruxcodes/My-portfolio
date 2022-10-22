@@ -4,7 +4,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-size: cover;
   background-attachment: fixed;
-  animation: overflow 3.5s 1;
+  /* animation: overflow 3.5s 1; */
 }
 @keyframes overflow {
   0% {
@@ -15,13 +15,17 @@ body {
   }
 }
 html {
-  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  /* scroll-snap-type: y proximity; */
+  transition: 0.5s;
 }
 main,
 .aboutme,
 .works {
   scroll-snap-align: start;
 }
+
+
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -43,14 +47,14 @@ nav {
   animation: navAnimation 5s 1;
 }
 @keyframes navAnimation {
-  0%{
+  0% {
     top: -100%;
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 0.7;
   }
-  100%{
+  100% {
     top: 0%;
     opacity: 1;
   }
@@ -70,16 +74,48 @@ nav::before {
 nav ul {
   display: flex;
   width: 100%;
+  padding: 0%;
   justify-content: space-around;
 }
 nav ul li {
   width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 5px;
   display: inline;
+  position: relative;
 }
 nav ul li a {
-  color: white;
+  color: rgba(255, 255, 255, 0.587);
+  text-decoration: none;
+  transition: 0.4s;
+  font-size: 1.6vh;
+}
+@media screen and (max-width: 600px) {
+  nav ul li a {
+    font-size: 1.1vh;
+  }
+}
+@media screen and (max-width: 360px) {
+  nav ul li {
+    letter-spacing: 0px;
+  }
+}
+nav ul li::before {
+  content: "";
+  width: 0%;
+  transition: 0.4s;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  background: rgb(123, 123, 123);
 }
 
+nav ul li:hover::before {
+  width: 100%;
+}
+nav ul li:hover a {
+  color: white;
+}
 main {
   height: 100vh;
   display: flex;
@@ -644,6 +680,11 @@ main {
     width: 320px;
   }
 }
+@media screen and (max-width: 350px) {
+  .aboutme .thisisme {
+    width: 250px;
+  }
+}
 .about_me p {
   line-height: 30px;
   width: 80%;
@@ -688,7 +729,7 @@ main {
 }
 @media screen and (max-width: 530px) {
   .skillcards {
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
   }
 }
 .skillcards .card {
@@ -700,8 +741,13 @@ main {
   box-shadow: 1px 1px 10px rgb(92, 92, 92);
 }
 @media screen and (max-width: 400px) {
-  .skillcards .card{
+  .skillcards .card {
     width: 80px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .skillcards .card {
+    width: 60px;
   }
 }
 
@@ -712,7 +758,7 @@ main {
     rgba(91, 91, 91, 0.831)
   );
   background-size: 300%;
-  /* animation: skillcard 3s ease-in 0.5s infinite linear; */
+  animation: skillcard 3s ease-in 0.5s infinite linear;
   animation: skillcard 2s 0.2s infinite alternate;
   background-position: 0% 0%;
   transition: 0.5s;
@@ -725,15 +771,13 @@ main {
     rgba(91, 91, 91, 0.831)
   );
   background-size: 300%;
-  /* animation: skillcard 3s ease-in 0.5s infinite linear; */
+  animation: skillcard 3s ease-in 0.5s infinite linear;
   animation: skillcard 2s 0.2s infinite alternate;
   background-position: 0% 0%;
   transition: 0.5s;
 }
 
-/* .card:nth-child(even):hover {
-  background-position: 100% 150%;
-} */
+
 @keyframes skillcard {
   0% {
     background-position: 0% 0%;
@@ -746,9 +790,48 @@ main {
   }
 }
 
-
-
 /* This is the contact me section */
-.contact{
+.gmail{
+  margin: 20px 0px;
+  letter-spacing: 2px;
+  color: rgba(163, 163, 163, 0.818);
+  position: relative;
+  transition: .5s;
+}
+.gmail:hover{
+  color: white;
+
+}
+.contact {
   text-align: center;
+}
+.contact ul {
+  width: fit-content;
+  display: flex;
+  text-align: center;
+  padding: 0px;
+  margin: 20px auto;
+}
+
+.contact ul li{
+  text-align: center;
+  list-style-type: none;
+  margin: 10px;
+}
+
+.contact ul li a{
+  text-decoration: none;
+  color: rgb(92, 92, 92);
+  border-radius: 50%;
+  margin: 15px;
+  text-align: center;
+  font-size: 2.5vh;
+  display: inline-block;
+  position: relative;
+  transition: .5s;
+}
+
+.contact ul li a:hover{
+  transform: translateY(-5px);
+  color: white;
 }
