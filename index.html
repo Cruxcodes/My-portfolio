@@ -22,7 +22,13 @@
       <ul>
         <li><a href="#aboutme">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="https://drive.google.com/file/d/14jvaau2B-Q7Kt_oMMXGopk-NX9iPiWE6/view?usp=share_link">Résumé</a></li>
+        <li>
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/14jvaau2B-Q7Kt_oMMXGopk-NX9iPiWE6/view?usp=share_link"
+            >Résumé</a
+          >
+        </li>
         <li><a href="#contact" class="hirelink">Hire Me</a></li>
       </ul>
     </nav>
@@ -42,7 +48,7 @@
       <div class="mainContent">
         <div class="cover"></div>
         <p
-          style="margin: 0px; color: rgba(140, 140, 128, 0.874)"
+          style="margin: 0px; color: rgba(179, 179, 179, 0.997)"
           class="myname nickname"
         >
           Hi, my name is
@@ -52,7 +58,12 @@
         <p class="nickname">
           You can call me <span style="font-style: italic">Crusader</span>
         </p>
-        <a target="_blank" href="https://drive.google.com/file/d/14jvaau2B-Q7Kt_oMMXGopk-NX9iPiWE6/view?usp=share_link" class="resume">Résumé</a>
+        <a
+          target="_blank"
+          href="https://drive.google.com/file/d/14jvaau2B-Q7Kt_oMMXGopk-NX9iPiWE6/view?usp=share_link"
+          class="resume"
+          >Résumé</a
+        >
       </div>
       <div class="about">
         <!-- <h2>About Me</h2> -->
@@ -64,10 +75,7 @@
       </div>
     </main>
 
-    <section
-      id="aboutme"
-      class="works aboutme"
-    >
+    <section id="aboutme" class="works aboutme">
       <img class="thisisme" src="./img/thisisme.png" alt="" />
 
       <div class="about_me websites">
@@ -87,12 +95,12 @@
         <div class="skill_container">
           <div class="skillcards">
             <!--  -->
-            <div class="card" >
+            <div class="card">
               <img src="./img/skills/html.png" alt="HTML ICON" />
               <p>HTML</p>
             </div>
             <!--  -->
-            <div class="card" >
+            <div class="card">
               <img src="./img/skills/css.png" alt="CSS ICON" />
               <p>CSS</p>
             </div>
@@ -102,7 +110,7 @@
               <p>BOOTSTRAP</p>
             </div>
             <!--  -->
-            <div class="card" >
+            <div class="card">
               <img src="./img/skills/javascript.png" alt="JAVASCRIPT ICON" />
               <p>JAVASCRIPT</p>
             </div>
@@ -112,12 +120,12 @@
               <p>JQUERY</p>
             </div>
             <!--  -->
-            <div class="card" >
+            <div class="card">
               <img src="./img/skills/github.png" alt="GITHUB ICON" />
               <p>GITHUB</p>
             </div>
             <!--  -->
-            <div class="card" >
+            <div class="card">
               <img src="./img/skills/icons8-python-48.png" alt="PYTHON ICON" />
               <p>PYTHON</p>
             </div>
@@ -150,10 +158,12 @@
               </div>
 
               <div class="links">
-                <a target="_blank" href="#"
+                <a target="_blank" href="https://jmbama.netlify.app/"
                   >View Live</a
                 >
-                <a target="_blank" href="#">Code</a>
+                <a target="_blank" href="https://github.com/Cruxcodes/JMBAMA"
+                  >Code</a
+                >
               </div>
             </div>
             <!-- End of language used -->
@@ -189,7 +199,7 @@
                   <a target="_blank" href="https://termshub.pythonanywhere.com/"
                     >View Live</a
                   >
-                  <a target="_blank" href="#">Code</a>
+                  <a target="_blank" href="https://github.com/Cruxcodes/T-C-PP_gen_pjt73">Code</a>
                 </div>
               </div>
             </div>
@@ -243,10 +253,16 @@
               </div>
 
               <div class="links">
-                <a target="_blank" href="https://codepen.io/crux_Codes/pen/KKQvXrv"
+                <a
+                  target="_blank"
+                  href="https://codepen.io/crux_Codes/pen/KKQvXrv"
                   >View Live</a
                 >
-                <a target="_blank" href="https://codepen.io/crux_Codes/pen/KKQvXrv">Code</a>
+                <a
+                  target="_blank"
+                  href="https://codepen.io/crux_Codes/pen/KKQvXrv"
+                  >Code</a
+                >
               </div>
             </div>
             <!-- End of language used -->
@@ -256,10 +272,10 @@
           <!-- Fifth -->
           <div class="card fifthCard">
             <div class="card__img">
-              <img src="./img/termshub.png" alt="" />
+              <img src="./img/another project.png" alt="" />
             </div>
             <div class="project_info">
-              <h3>3d door with css</h3>
+              <h3>Huddle</h3>
             </div>
 
             <!-- The languages used -->
@@ -271,10 +287,10 @@
               </div>
 
               <div class="links">
-                <a target="_blank" href="https://termshub.pythonanywhere.com/"
+                <a target="_blank" href="https://cruxcodes.github.io/responsive-site/"
                   >View Live</a
                 >
-                <a target="_blank" href="#">Code</a>
+                <a target="_blank" href="https://github.com/Cruxcodes/responsive-site">Code</a>
               </div>
             </div>
             <!-- End of language used -->
@@ -355,9 +371,16 @@
       referrerpolicy="no-referrer"
     ></script>
     <script>
-      var type = document.getElementById("type");
+      var type = document.getElementsByTagName("body");
 
-      window.onunload = function () {
+      // if ()
+
+      type.addEventListener("onbeforeload", function () {
+        console.log("tHIS IS A NEW ONE");
+      });
+
+      type.onbeforeunload = function () {
+        console.log("Write the only thinks  ");
         window.scrollTo(0, 0);
       };
     </script>
