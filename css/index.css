@@ -210,7 +210,7 @@ main {
   width: fit-content;
   position: relative;
   /* opacity: 0.7; */
-  font-size: 12.5vh;
+  font-size: 11.5vh;
 }
 
 .mainContent h1::before {
