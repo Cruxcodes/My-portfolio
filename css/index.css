@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
   margin: 0pc;
+  font-family: "Lato", sans-serif;
+  /* font-weight: 100; */
   background: rgb(52, 52, 52);
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   background-size: cover;
   background-attachment: fixed;
   animation: overflow 3.5s 1;
@@ -16,10 +21,9 @@ body {
 }
 html {
   scroll-behavior: smooth;
-  /* scroll-snap-type: y proximity; */
   transition: 0.5s;
 }
-.hirelink{
+.hirelink {
   background: rgb(39, 30, 30);
   color: white;
 }
@@ -28,7 +32,6 @@ main,
 .works {
   scroll-snap-align: start;
 }
-
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -155,7 +158,7 @@ main {
   left: 0pc;
   top: 0%;
   z-index: 100;
-  animation: cover 4s 1;
+  animation: cover 3.5s 1;
 }
 @keyframes cover {
   0% {
@@ -217,7 +220,6 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-
   background: #000;
 }
 @media screen and (max-width: 1080px) {
@@ -247,6 +249,7 @@ main {
 .mainContent .name {
   z-index: 500;
   position: relative;
+  
 }
 .mainContent .name1::after {
   content: "";
@@ -257,7 +260,7 @@ main {
   width: 0%;
   height: 100%;
   z-index: 600;
-  animation: name 2.3s 1;
+  animation: name 2s 1;
 }
 .mainContent .name2::after {
   content: "";
@@ -268,7 +271,7 @@ main {
   width: 0%;
   height: 100%;
   z-index: 600;
-  animation: name 2.3s 1;
+  animation: name 2s 1;
 }
 
 @keyframes name {
@@ -330,7 +333,7 @@ main {
 }
 .nickname,
 .resume {
-  animation: left 1s 3s 1;
+  animation: left 1s 2.4s 1;
 }
 @keyframes left {
   0% {
@@ -382,7 +385,7 @@ main {
   box-sizing: border-box;
   z-index: 22;
   color: white;
-  animation: about 1s 3s 1;
+  animation: about 1s 2.2s 1;
 }
 @keyframes about {
   0% {
@@ -406,7 +409,6 @@ main {
 .about p {
   opacity: 0.8;
 }
-
 .about p:last-child {
   width: 50%;
 }
@@ -692,7 +694,8 @@ main {
 }
 .about_me p {
   line-height: 30px;
-  width: 80%;
+  width: 100%;
+  max-width: 600px;
   margin-bottom: 30px;
   font-size: 2vh;
 }
@@ -701,7 +704,7 @@ main {
   color: rgb(151, 126, 126);
 }
 
-@media screen and (min-width: 1399px) {
+/* @media screen and (min-width: 1399px) {
   .about_me p {
     width: 60%;
   }
@@ -712,7 +715,8 @@ main {
     line-height: 52px;
     width: 50%;
   }
-}
+} */
+
 .skills {
   /* background: rgb(62 62 62); */
   margin-top: 30px;
@@ -782,7 +786,6 @@ main {
   transition: 0.5s;
 }
 
-
 @keyframes skillcard {
   0% {
     background-position: 0% 0%;
@@ -796,16 +799,15 @@ main {
 }
 
 /* This is the contact me section */
-.gmail{
+.gmail {
   margin: 20px 0px;
   letter-spacing: 2px;
   color: rgba(163, 163, 163, 0.818);
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
-.gmail:hover{
+.gmail:hover {
   color: white;
-
 }
 .contact {
   text-align: center;
@@ -818,13 +820,13 @@ main {
   margin: 20px auto;
 }
 
-.contact ul li{
+.contact ul li {
   text-align: center;
   list-style-type: none;
   margin: 10px;
 }
 
-.contact ul li a{
+.contact ul li a {
   text-decoration: none;
   color: rgb(92, 92, 92);
   border-radius: 50%;
@@ -833,16 +835,46 @@ main {
   font-size: 2.5vh;
   display: inline-block;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.contact ul li a:hover{
+.contact ul li a:hover {
   transform: translateY(-5px);
   color: white;
 }
 
-@media screen and (max-width : 320px) {
-  .contact ul li a{
+@media screen and (max-width: 320px) {
+  .contact ul li a {
     margin: 0px;
   }
+}
+
+.section__heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
+  margin: 10px 0px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-decoration: underline dashed;
+  text-decoration-color: white;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+@media screen and (max-width: 328px) {
+  .section__heading {
+    font-size: 2.5em;
+  }
+}
+
+.section__sub__heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0px;
+}
+
+.tenor-gif-embed {
+  max-width: 250px;
 }
