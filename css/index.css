@@ -258,6 +258,11 @@ main {
   z-index: 500;
   position: relative;
 }
+@media screen and (max-width: 400px) {
+  .mainContent .name {
+    margin: auto;
+  }
+}
 .mainContent .name1::after {
   content: "";
   position: absolute;
@@ -327,8 +332,8 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200%;
-  height: 200%;
+  width: 0%;
+  height: 0%;
   background: rgb(97, 97, 97);
   border-radius: 50px;
   opacity: 0;
@@ -418,7 +423,6 @@ main {
   opacity: 0.8;
 }
 
-
 @media screen and (max-width: 800px) {
   .about p {
     opacity: 1;
@@ -458,8 +462,7 @@ main {
 }
 
 .works {
-  width: 100%;
-  padding: 40px 80px;
+  padding: 40px 0px;
   color: rgb(255, 255, 255);
   box-sizing: border-box;
   padding-top: 5vh;
@@ -470,7 +473,7 @@ main {
 }
 @media screen and (max-width: 765px) {
   .works {
-    padding: 30px 20px;
+    padding: 30px 0px;
     padding-top: 50px;
   }
 }
@@ -689,6 +692,7 @@ main {
   width: 100%;
   max-width: 600px;
   margin-bottom: 30px;
+  font-weight: 400;
   font-size: 2vh;
 }
 
@@ -696,59 +700,70 @@ main {
   color: rgb(151, 126, 126);
 }
 
-/* @media screen and (min-width: 1399px) {
-  .about_me p {
-    width: 60%;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .about_me p {
-    line-height: 52px;
-    width: 50%;
-  }
-} */
-
+/* This is the skills section */
 .skills {
-  /* background: rgb(62 62 62); */
   margin-top: 30px;
 }
-.skill_container {
-  /* max-width: 1200px; */
-  margin: auto;
-  /* width: 80%; */
-}
+
 .skillcards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* gap: 40px; */
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 2em;
+  row-gap: 1em;
+}
+@media screen and (max-width: 500px) {
+  .skillcards {
+    column-gap: 1em;
+    row-gap: 1em;
+  }
 }
 @media screen and (max-width: 769px) {
   .skillcards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 530px) {
   .skillcards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 246px) {
+  .skillcards {
+    grid-template-columns: 1fr;
   }
 }
 .skillcards .card {
-  width: 100px;
+  font-family: "Poppins";
+  width: auto;
   text-align: center;
-  margin: 20px 0px;
-  padding: 15px 30px;
-  /* margin: auto; */
-  box-shadow: 1px 1px 10px rgb(92, 92, 92);
+  padding: 15px 0px;
+  box-shadow: 1px 1px 10px rgba(82, 82, 82, 0.582);
+}
+
+@media screen and (max-width: 530px) {
+  .skillcards .card {
+  box-shadow: 1px 1px 10px rgba(92, 92, 92, 0.342);
+
+  }
+}
+
+.skillcards .card p {
+  margin: 2px auto;
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+.skillcards .card img {
+  width: 30px;
+  height: 30px;
 }
 @media screen and (max-width: 400px) {
   .skillcards .card {
-    width: 80px;
+    /* width: 80px; */
   }
 }
 @media screen and (max-width: 350px) {
   .skillcards .card {
-    width: 60px;
+    /* width: 60px; */
   }
 }
 
@@ -759,8 +774,7 @@ main {
     rgba(91, 91, 91, 0.831)
   );
   background-size: 300%;
-  animation: skillcard 3s ease-in 0.5s infinite linear;
-  animation: skillcard 2s 0.2s infinite alternate;
+  animation: skillcard 2s 0.1s infinite alternate;
   background-position: 0% 0%;
   transition: 0.5s;
 }
@@ -772,8 +786,7 @@ main {
     rgba(91, 91, 91, 0.831)
   );
   background-size: 300%;
-  animation: skillcard 3s ease-in 0.5s infinite linear;
-  animation: skillcard 2s 0.2s infinite alternate;
+  animation: skillcard 2s 0.1s infinite alternate;
   background-position: 0% 0%;
   transition: 0.5s;
 }
@@ -789,6 +802,8 @@ main {
     background-position: 100% 150%;
   }
 }
+
+/* The skills section end */
 
 /* This is the contact me section */
 .gmail {
@@ -868,5 +883,6 @@ main {
 }
 
 .tenor-gif-embed {
-  max-width: 250px;
+  max-width: 350px;
+  width: 100%;
 }
