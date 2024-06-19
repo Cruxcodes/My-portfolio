@@ -497,13 +497,13 @@ main {
     max-width: 100vw;
   }
 }
-.websites .row .card {
+#projects .row .card {
   transition: 0.5s;
   background: rgb(52, 52, 52);
   border: none;
   box-shadow: 1px 1px 15px rgb(37, 37, 37);
 }
-.websites .row .card:hover {
+#projects .row .card:hover {
   box-shadow: 3px 20px 10px 1px rgba(0, 0, 0, 0.604);
   transform: translateY(-5px);
 }
@@ -534,7 +534,6 @@ main {
   height: 100%;
 }
 .row .card {
-  /* margin-left: 20px; */
   overflow: hidden;
   border-radius: 10px;
   height: 100%;
@@ -710,6 +709,7 @@ main {
   grid-template-columns: repeat(6, 1fr);
   column-gap: 2em;
   row-gap: 1em;
+  margin: 30px auto;
 }
 @media screen and (max-width: 500px) {
   .skillcards {
