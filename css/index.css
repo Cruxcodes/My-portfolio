@@ -540,29 +540,22 @@ main {
 }
 .firstCard {
   grid-area: firstCard;
-  font-size: 1.7vh;
 }
 .secondCard {
   grid-area: secondCard;
-  font-size: 1.7vh;
 }
-
 .thirdCard {
   grid-area: thirdCard;
-  font-size: 1.7vh;
 }
 .fourthCard {
   grid-area: fourthCard;
-  font-size: 1.7vh;
 }
 
 .fifthCard {
   grid-area: fifthCard;
-  font-size: 1.7vh;
 }
 .sixthCard {
   grid-area: sixthCard;
-  font-size: 2vh;
 }
 .row .card p {
   letter-spacing: 1.2px;
@@ -571,23 +564,38 @@ main {
 .row .card__img {
   width: 100%;
 }
-.project_info {
-  padding: 0px 20px;
-  padding-bottom: 10px;
+
+.card h3 {
+  font-size: 1.5em;
+  margin: 20px 0px;
+  text-transform: uppercase;
+  font-family: "Inter",sans-serif;
+}
+.card h3+p{
+  color: white;
+  font-size: 14px;
+  margin-top: 0px;
 }
 .row .card__img img {
   width: 100%;
   height: 100%;
 }
 
+.card__container{
+  width: 95%;
+  margin: auto;
+}
+
 .heading {
   display: flex;
-  padding: 0px 20px;
+  column-gap: 10px;
   padding-bottom: 10px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .heading span {
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9em;
 }
 @media screen and (max-width: 768px) {
   .heading {
@@ -597,17 +605,23 @@ main {
     margin: 3px;
   }
 }
+
+.used p{
+  font-weight: 300;
+  font-size: .85em;
+}
 .links {
   display: flex;
   width: fit-content;
   margin: auto;
   padding-top: 20px;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 20px;
+  gap: 20px;
 }
 .links a {
   text-decoration: none;
-  margin: 0pc 20px;
+  /* margin: 0pc 20px; */
   color: white;
   padding: 10px 24px;
   position: relative;
@@ -742,8 +756,7 @@ main {
 
 @media screen and (max-width: 530px) {
   .skillcards .card {
-  box-shadow: 1px 1px 10px rgba(92, 92, 92, 0.342);
-
+    box-shadow: 1px 1px 10px rgba(92, 92, 92, 0.342);
   }
 }
 
@@ -755,16 +768,6 @@ main {
 .skillcards .card img {
   width: 30px;
   height: 30px;
-}
-@media screen and (max-width: 400px) {
-  .skillcards .card {
-    /* width: 80px; */
-  }
-}
-@media screen and (max-width: 350px) {
-  .skillcards .card {
-    /* width: 60px; */
-  }
 }
 
 .skillcards .card:nth-child(even) {
